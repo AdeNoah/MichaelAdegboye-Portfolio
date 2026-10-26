@@ -1,6 +1,4 @@
-// import { Link } from "react-router"
-// import { navigationLinks } from "./NavBar"
-
+import { Link } from 'react-router'
 
 const Footer = () => {
     return (
@@ -17,11 +15,34 @@ const Footer = () => {
 
                 <div>
                     <h4 className="font-medium mb-4">Quick Links</h4>
+                    <ul className="space-y-2 text-[#a3a3a3]">
+                        <li>
+                            <Link className="hover:text-white" to="/about">About</Link>
+                        </li>
+                        <li>
+                            <Link className="hover:text-white" to="/ministry">Ministry</Link>
+                        </li>
+                        <li>
+                            <Link className="hover:text-white" to="/publications">Publications</Link>
+                        </li>
+                        <li>
+                            <Link className="hover:text-white" to="/agriculture">Agriculture</Link>
+                        </li>
+                    </ul>
                 </div>
 
                 <div>
                     <h4 className="font-medium mb-4">Connect</h4>
-
+                    <ul className="space-y-2 text-[#a3a3a3]">
+                        <li>
+                            <Link className="hover:text-white" to="/contact">Contact</Link>
+                        </li>
+                        <li>
+                            <a className="hover:text-white" href="mailto:hello@example.com">
+                                maadegboye@yahoo.com
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
