@@ -22,7 +22,7 @@ const Home = () => {
                 </a>
             </div>
 
-            <div id="three-domains" className='h-dvh flex flex-col justify-center items-center p-2 scroll-mt-4'>
+            <div id="three-domains" className='h-screen flex flex-col justify-center items-center p-2 scroll-mt-4'>
                 <h2 className='text-3xl md:text-6xl mb-4 font-light'>
                     Three Domains, One Vision
                 </h2>
