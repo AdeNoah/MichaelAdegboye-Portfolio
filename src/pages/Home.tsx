@@ -50,7 +50,7 @@ const Home = () => {
                 <h1 className='text-4xl font-light md:text-7xl mb-4'>
                     Rev. Michael <br /><span className='font-semibold'>Adegboye</span> PhD.
                 </h1>
-                <p className='text-[#525252] mb-4'>
+                <p className='text-[#525252] mb-4 text-center'>
                     Advancing Faith, Knowledge, and Sustainable Impact
                 </p>
                 <p className='text-[#737373]  text-center mb-8'>
@@ -108,7 +108,7 @@ const Home = () => {
             </section>
 
 {/* roooted in purpose section */}
-            <div className='min-h-dvh bg-[#fafafa] flex p-2'>
+            <div className='min-h-dvh bg-[#fafafa] grid max-w-6xl md:grid-cols-2'>
                 <div>
                     <img src="" alt="Michael Adegboye" className='' />
                 </div>
