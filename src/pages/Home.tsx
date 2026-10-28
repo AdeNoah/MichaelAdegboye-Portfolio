@@ -1,13 +1,52 @@
 
-import { MoveRight } from 'lucide-react'
-import { Church } from 'lucide-react'
+import { BookOpen, Church, MoveRight, Sprout } from 'lucide-react'
+import { Link } from 'react-router'
 
+const domains = [
+    {
+        title: 'Ministry',
+        subtitle: 'Blessed Generation Ministry',
+        description: 'A thriving community dedicated to spiritual growth, worship, and transforming lives through the gospel of Jesus Christ.',
+        link: '/ministry',
+        linkLabel: 'Visit Church',
+        image: '/ministry.jpg',
+        icon: Church,
+        background: 'bg-[#fffbeb]',
+        iconBackground: 'bg-[#fef3c7]',
+        linkColor: 'text-[#78350f]'
+    },
+    {
+        title: 'Publications',
+        subtitle: 'Thought Leadership',
+        description: 'Books, articles, and speaking engagements exploring theology, leadership, and practical wisdom for contemporary challenges.',
+        link: '/publications',
+        linkLabel: 'Explore Publications',
+        image: '/publications.jpg',
+        icon: BookOpen,
+        background: 'bg-[#eff6ff]',
+        iconBackground: 'bg-[#dbeafe]',
+        linkColor: 'text-[#1e3a8a]',
+    },
+    {
+        title: 'Agriculture',
+        subtitle: 'Consultancy Services',
+        description: 'Professional guidance in sustainable farming, agricultural innovation, and building resilient food systems for communities.',
+        link: '/agriculture',
+        linkLabel: 'Explore Agriculture',
+        image: '/agriculture.jpg',
+        icon: Sprout,
+        background: 'bg-[#f0fdf4]',
+        iconBackground: 'bg-[#dcfce7]',
+        linkColor: 'text-[#14532d]',
+    },
+]
 
 const Home = () => {
     return (
         <main className='flex flex-col justify-center '>
 
-            <div className='flex flex-col items-center justify-center bg-[#f5f5f5] h-screen p-2'>
+{/* first section  */}
+            <div className='flex flex-col items-center justify-center bg-[#f5f5f5] min-h-dvh p-2'>
                 <h1 className='text-4xl font-light md:text-7xl mb-4'>
                     Rev. Michael <br /><span className='font-semibold'>Adegboye</span> PhD.
                 </h1>
@@ -22,36 +61,54 @@ const Home = () => {
                 </a>
             </div>
 
-            <div id="three-domains" className='h-screen flex flex-col justify-center items-center p-2 scroll-mt-4'>
-                <h2 className='text-3xl md:text-6xl mb-4 font-light'>
+{/* three domains section  */}
+            <section id="three-domains" className="flex min-h-dvh scroll-mt-4 flex-col items-center justify-center px-4 py-16">
+                <h2 className="mb-4 text-center text-3xl font-light md:text-6xl">
                     Three Domains, One Vision
                 </h2>
-                <p className='text-[#525252] mb-16'>
+                <p className="mb-10 max-w-2xl text-center text-[#525252]">
                     Discover how faith, knowledge, and sustainability converge to create lasting impact
                 </p>
-                <div className='bg-[#fffbeb] flex'>
-                    <div className='flex flex-col gap-4 md:gap-8'>
-                        <img src="public\ministry.jpg" alt="ministry image: showing the pews and the alter" />
-                        <div className='flex flex-col items-start justify-center p-8'>
-                            <h3 className='flex gap-4 text-2xl md:text-5xl'>
-                                <span className='self-center p-2 bg-[#fef3c7] rounded-full'><Church  aria-hidden="true" /></span>Ministry
-                            </h3>
-                            <h4 className='text-xl md:text-4xl'>
-                                Blessed Generation Ministry
-                            </h4>
-                            <p className=''>
-                                A thriving community dedicated to spiritual growth, worship, and transforming lives through the gospel of Jesus Christ.
-                            </p>
-                            <p className='flex'>
-                                <a href="">Visit Church</a> <span><MoveRight size={24} aria-hidden="true" /></span>
-                            </p>
-                        </div>
-                    </div>
 
+                <div className="grid w-full max-w-6xl gap-6 md:grid-cols-3">
+                    {domains.map(({ title, subtitle, description, link, linkLabel, image, icon: Icon, background, iconBackground, linkColor }) => (
+                        <article key={title} className={`flex h-full flex-col overflow-hidden rounded-lg ${background}`}>
+                            {image ? (
+                                <img
+                                    src={image}
+                                    alt="subtitle"
+                                    className="aspect-video w-full object-cover"
+                                />
+                            ) : (
+                                <div className="flex aspect-video items-center justify-center">
+                                    <Icon size={64} strokeWidth={1.5} aria-hidden="true" />
+                                </div>
+                            )}
+
+                            <div className="flex flex-1 flex-col items-start p-6 sm:pt-8">
+                                <h3 className="mb-5 flex items-center gap-3 text-2xl md:text-3xl">
+                                    <span className={`rounded-full p-2 ${iconBackground}`}>
+                                        <Icon aria-hidden="true" />
+                                    </span>
+                                    {title}
+                                </h3>
+                                <h4 className="mb-3 text-lg font-semibold sm:text-xl">
+                                    {subtitle}
+                                </h4>
+                                <p className="mb-6 flex-1 text-left text-[#525252]">
+                                    {description}
+                                </p>
+                                <Link to={link} className={`flex items-center gap-2 font-semibold ${linkColor}`}>
+                                    {linkLabel} <MoveRight size={24} aria-hidden="true" />
+                                </Link>
+                            </div>
+                        </article>
+                    ))}
                 </div>
-            </div>
+            </section>
 
-            <div className='h-dvh bg-[#fafafa] flex p-2'>
+{/* roooted in purpose section */}
+            <div className='min-h-dvh bg-[#fafafa] flex p-2'>
                 <div>
                     <img src="" alt="Michael Adegboye" className='' />
                 </div>
@@ -70,6 +127,7 @@ const Home = () => {
                 </div>
             </div>
 
+{/* featured highlight section */}
             <div className='h-[70dvh] p-2'>
                 <h2>
                     Featured Highlights
@@ -77,7 +135,8 @@ const Home = () => {
 
             </div>
 
-            <div className='h-[70dvh] flex py-24 bg-gradient-to-br from-[#fffbeb] to-[#fff7ed] p-2'>
+{/* support section  */}
+            <div className='min-h-[70dvh] flex py-24 bg-gradient-to-br from-[#fffbeb] to-[#fff7ed] p-2'>
                 <div>
                     <h2>
                         Support Our Mission
@@ -100,7 +159,8 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='h-[50dvh] flex flex-col items-center p-2'>
+{/* lets connect section */}
+            <div className='min-h-[50dvh] flex flex-col items-center p-2'>
                 <h2>
                     Let's connect
                 </h2>
