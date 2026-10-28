@@ -45,7 +45,7 @@ const Home = () => {
     return (
         <main className='flex flex-col justify-center '>
 
-{/* first section  */}
+{/* home section  */}
             <div className='flex flex-col items-center justify-center bg-[#f5f5f5] min-h-dvh p-2'>
                 <h1 className='text-4xl font-light md:text-7xl mb-4'>
                     Rev. Michael <br /><span className='font-semibold'>Adegboye</span> PhD.
@@ -108,22 +108,22 @@ const Home = () => {
             </section>
 
 {/* roooted in purpose section */}
-            <div className='min-h-dvh bg-[#fafafa] grid max-w-6xl md:grid-cols-2'>
+            <div className='min-h-dvh bg-[#fafafa] grid max-w-screen md:grid-cols-2 justify-center items-center p-4 gap-8 md:p-8 '>
                 <div>
-                    <img src="" alt="Michael Adegboye" className='' />
+                    <img src="/michael.jpg" alt="Michael Adegboye" className="h-full w-full object-cover" />
                 </div>
                 <div>
-                    <h2>
+                    <h2 className='text-3xl md:text-6xl  font-light mb-8'>
                         Rooted in Purpose
                     </h2>
-                    <p>
+                    <p className='text-[#525252] mb-8'>
                         Michael Adegboye is a multifaceted leader whose work spans spiritual ministry, academic scholarship, and agricultural innovation. His unique approach integrates faith-based principles with practical expertise to create sustainable impact across communities.
                         <br />
                         As the founder of Blessed Generation Church, an accomplished author and speaker, and a trusted agriculture consultant, Michael demonstrates that diverse callings can harmonize to serve a greater mission.
                     </p>
-                    <button className='flex gap-2 bg-[#0a0a0a] text-white p-6 font-semibold'>
-                        Learn More <span><MoveRight size={24} aria-hidden="true" /></span>
-                    </button>
+                    <Link to="/about" className='flex gap-2 bg-[#0a0a0a] text-white p-6 font-semibold w-fit'>
+                        Learn More <MoveRight size={24} aria-hidden="true" />
+                    </Link>
                 </div>
             </div>
 
