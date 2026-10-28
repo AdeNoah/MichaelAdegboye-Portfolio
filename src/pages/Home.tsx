@@ -2,6 +2,7 @@
 import { BookOpen, Church, MoveRight, Sprout } from 'lucide-react'
 import { Link } from 'react-router'
 
+// domains components array
 const domains = [
     {
         title: 'Ministry',
@@ -38,6 +39,47 @@ const domains = [
         background: 'bg-[#f0fdf4]',
         iconBackground: 'bg-[#dcfce7]',
         linkColor: 'text-[#14532d]',
+    },
+]
+
+// highlights component array
+const highlights = [
+    {
+        image: '/highlight-ministry.jpg',
+        name: 'Ministry',
+        title: `"Living with Purpose in Uncertain Times"`,
+        note: 'A powerful message on finding direction and meaning through faith'
+    },
+    {
+        image: '/publications.jpg',
+        name: 'Publications',
+        title: `The Leader's Journey: Faith & Vision`,
+        note: 'A comprehensive guide to integrating spiritual wisdom with modern leadership'
+    },
+    {
+        image: '/highlight-agriculture.jpg',
+        name: 'Agriculture',
+        title: `Sustainable Farming Initiative`,
+        note: 'A dedicated agriculturist innovating and thriving in the agricultural craft'
+    },
+]
+
+// contacts components array
+const contacts = [
+    {
+        title: 'Ministry Impact',
+        description: 'Supporting worship services, community programs, and spiritual growth initiatives',
+        icon: Church,
+    },
+    {
+        title: 'Educational Resources',
+        description: 'Developing books, training materials, and leadership development programs',
+        icon: BookOpen,
+    },
+    {
+        title: 'Agricultural Programs',
+        description: 'Training farmers and building sustainable food systems in underserved communities',
+        icon: Sprout,
     },
 ]
 
@@ -128,55 +170,83 @@ const Home = () => {
             </div>
 
 {/* featured highlight section */}
-            <div className='h-[70dvh] p-2 flex flex-col justify-center items-center'>
-                <h2 className='text-3xl md:text-6xl font-light'>
+            <section className="flex min-h-[70dvh] flex-col items-center justify-center px-4 py-16">
+                <h2 className="mb-4 text-center text-3xl font-light md:text-6xl">
                     Featured Highlights
                 </h2>
-                <p>
-                    Recent work across ministry, publications and consultancy 
+                <p className="mb-10 text-center text-[#525252]">
+                    Recent work across ministry, publications and consultancy
                 </p>
-            </div>
+
+                <div className="grid w-full max-w-6xl gap-6 md:grid-cols-3">
+                    {highlights.map(({ image, name, title, note }) => (
+                        <article key={title} className="overflow-hidden rounded-lg border border-none bg-white">
+                            <img
+                                src={image}
+                                alt={title}
+                                className="aspect-video w-full object-cover"
+                            />
+                            <div className="p-6 text-left">
+                                <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#737373]">
+                                    {name}
+                                </p>
+                                <h3 className="mb-3 text-xl font-medium">{title}</h3>
+                                <p className="text-[#525252]">{note}</p>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </section>
 
 {/* support section  */}
-            <div className='min-h-[70dvh] flex py-24 bg-gradient-to-br from-[#fffbeb] to-[#fff7ed] p-2'>
+            <section className="grid min-h-[70dvh] items-center gap-12 bg-gradient-to-br from-[#fffbeb] to-[#fff7ed] px-4 py-16 md:grid-cols-2 md:px-8 lg:px-16">
                 <div>
-                    <h2 className='text-3xl md:text-6xl font-light'>
+                    <h2 className="mb-8 text-3xl font-light md:text-6xl">
                         Support Our Mission
                     </h2>
-                    <p>
+                    <p className="mb-6 max-w-xl text-[#525252]">
                         Partner with us in advancing faith, knowledge, and sustainable impact across communities. Your support enables ministry outreach, educational resources, and agricultural programs that transform lives.
-                        <br />
+                    </p>
+                    <p className="mb-8 max-w-xl text-[#525252]">
                         Whether through one-time gifts or ongoing partnership, every contribution makes a meaningful difference in reaching people with hope and practical solutions.
                     </p>
-                    <div>
-                        <button>
-                            Give Now <span><MoveRight size={24} aria-hidden="true" /></span>
+                    <div className="flex flex-col gap-4 sm:flex-row">
+                        <button  className="flex items-center justify-center gap-2 bg-[#d97706] px-8 py-4 font-semibold text-white">
+                            Give Now <MoveRight size={24} aria-hidden="true" />
                         </button>
-
-                        <button>
-                            Learn More <span><MoveRight size={24} aria-hidden="true" /></span>
-                        </button>
-
+                        <Link to="/ministry" className="flex items-center justify-center gap-2 border border-[#d97706] px-8 py-4 font-semibold text-[#d97706]">
+                            Learn More <MoveRight size={24} aria-hidden="true" />
+                        </Link>
                     </div>
                 </div>
 
-                <div>
-                    <div></div>
+                <div className="grid gap-5">
+                    {contacts.map(({ title, description, icon: Icon }) => (
+                        <article key={title} className="grid grid-cols-[auto_1fr] items-start gap-5 border border-[#facc15] bg-white/40 p-6">
+                            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#fef3c7] text-[#d97706]">
+                                <Icon size={28} aria-hidden="true" />
+                            </div>
+                            <div>
+                                <h3 className="mb-2 text-xl font-semibold">{title}</h3>
+                                <p className="text-sm leading-6 text-[#525252]">{description}</p>
+                            </div>
+                        </article>
+                    ))}
                 </div>
-            </div>
+            </section>
 
 {/* lets connect section */}
-            <div className='min-h-[50dvh] flex flex-col items-center p-2'>
-                <h2>
+            <div className='min-h-[50dvh] flex flex-col items-center justify-center p-2 bg-[#171717] text-white text-center'>
+                <h2 className='text-3xl md:text-6xl font-light mb-4'>
                     Let's connect
                 </h2>
 
-                <p>
+                <p className='font-light text-xl mb-4'>
                     Whether you're seeking spiritual guidance, academic insight, or agricultural expertise, I'd love to hear from you.
                 </p>
-                <button className='flex '>
+                <Link to="/contact" className='flex gap-2 text-[#171717] bg-white p-4'>
                     Get in Touch <span><MoveRight size={24} aria-hidden="true" /></span>
-                </button>
+                </Link>
             </div>
         </main>
 
