@@ -128,17 +128,19 @@ const Home = () => {
             </div>
 
 {/* featured highlight section */}
-            <div className='h-[70dvh] p-2'>
-                <h2>
+            <div className='h-[70dvh] p-2 flex flex-col justify-center items-center'>
+                <h2 className='text-3xl md:text-6xl font-light'>
                     Featured Highlights
                 </h2>
-
+                <p>
+                    Recent work across ministry, publications and consultancy 
+                </p>
             </div>
 
 {/* support section  */}
             <div className='min-h-[70dvh] flex py-24 bg-gradient-to-br from-[#fffbeb] to-[#fff7ed] p-2'>
                 <div>
-                    <h2>
+                    <h2 className='text-3xl md:text-6xl font-light'>
                         Support Our Mission
                     </h2>
                     <p>
@@ -156,6 +158,10 @@ const Home = () => {
                         </button>
 
                     </div>
+                </div>
+
+                <div>
+                    <div></div>
                 </div>
             </div>
 
