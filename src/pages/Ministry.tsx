@@ -161,7 +161,7 @@ const Ministry = () => {
             </address>
             <a
               className="inline-flex items-center gap-1 text-sm font-semibold text-[#c2410c] hover:text-[#9a3412]"
-              href=""
+              href="https://maps.app.goo.gl/Sa2sGqitFAcxBZ299"
               target="_blank"
               rel="noreferrer"
             >
