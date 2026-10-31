@@ -129,10 +129,6 @@ const Ministry = () => {
                 <Clock3 aria-hidden="true" className="shrink-0 text-slate-600" size={16} />
                 <span>First Service: 8:00 AM</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Clock3 aria-hidden="true" className="shrink-0 text-slate-600" size={16} />
-                <span>Second Service: 10:30 AM</span>
-              </li>
             </ul>
           </article>
 
@@ -159,13 +155,13 @@ const Ministry = () => {
             </span>
             <h3 className="mb-3 text-xl font-light text-slate-900">Location</h3>
             <address className="mb-2 text-sm not-italic leading-7 text-slate-700">
-              123 Faith Avenue
+              Blessed Generation Church Auditorium, Trade Center Kuru
               <br />
-              Lagos, Nigeria
+              Plateau, Nigeria
             </address>
             <a
               className="inline-flex items-center gap-1 text-sm font-semibold text-[#c2410c] hover:text-[#9a3412]"
-              href="https://www.google.com/maps/search/?api=1&query=123+Faith+Avenue%2C+Lagos%2C+Nigeria"
+              href=""
               target="_blank"
               rel="noreferrer"
             >
