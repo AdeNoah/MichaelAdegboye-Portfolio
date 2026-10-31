@@ -1,8 +1,10 @@
+import { BookOpenText } from "lucide-react"
+
 const Publications = () => {
-  return(
-      <main>
-        <h1>Publications</h1>
-      </main>
+  return (
+    <main className="min-h-[]">
+      
+    </main>
   )
 }
 
