@@ -31,12 +31,12 @@ const Ministry = () => {
             A vibrant community committed to spiritual growth, authentic worship, and transforming lives through the gospel of Jesus Christ
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
-            <Link
+            <a
               className="inline-flex items-center gap-2 bg-[#c2410c] px-4 py-2 text-xs font-semibold text-white hover:bg-[#9a3412]"
-              to="/contact"
+              href="#join-us"
             >
               Plan Your Visit <MoveRight aria-hidden="true" size={14} />
-            </Link>
+            </a>
             <button className="inline-flex items-center border border-[#c2410c] px-4 py-2 text-xs font-semibold text-[#c2410c] hover:bg-[#fff7ed]">
               Watch Online
             </button>
@@ -110,7 +110,7 @@ const Ministry = () => {
       </section>
 
       {/* join us section  */}
-      <section className="bg-[#fffbeb] px-6 py-12 sm:px-8 sm:py-16">
+      <section id="join-us" className="scroll-mt-24 bg-[#fffbeb] px-6 py-12 sm:px-8 sm:py-16">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-light text-[#9a3412]">Join Us</h2>
           <p className="mt-3 text-base text-slate-700">
@@ -161,7 +161,7 @@ const Ministry = () => {
             </address>
             <a
               className="inline-flex items-center gap-1 text-sm font-semibold text-[#c2410c] hover:text-[#9a3412]"
-              href="https://maps.app.goo.gl/Sa2sGqitFAcxBZ299"
+              href="http://maps.google.com/maps?q=9.744208,8.837758&ll=9.744208,8.837758&z=17"
               target="_blank"
               rel="noreferrer"
             >
