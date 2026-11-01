@@ -88,7 +88,7 @@ const Home = () => {
         <main className='flex flex-col justify-center '>
 
 {/* home section  */}
-            <div className='flex flex-col items-center justify-center bg-[#f5f5f5] min-h-dvh p-2'>
+            <div className='flex text-center  flex-col items-center justify-center bg-[#f5f5f5] min-h-dvh p-2'>
                 <h1 className='text-4xl font-light md:text-7xl mb-4'>
                     Rev. Michael <br /><span className='font-semibold'>Adegboye</span> PhD.
                 </h1>

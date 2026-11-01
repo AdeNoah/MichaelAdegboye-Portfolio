@@ -23,21 +23,37 @@ const coreValues = [
 
 const About = () => {
     return (
-        <main className="mx-auto max-w-6xl px-6 py-10 text-neutral-800 sm:px-8 sm:py-12">
+        <main className="mx-auto max-w-6xl px-6 text-neutral-800 sm:px-8">
+            <section className="relative left-1/2 mb-10 flex min-h-[28dvh] w-screen -translate-x-1/2 flex-col items-center justify-center bg-[#fafafa] px-6 text-center">
+                <h1
+                    className="text-4xl font-light tracking-[-0.06em] text-[#2f2f2f] sm:text-5xl lg:text-[4rem]"
+                >
+                    About Michael Adegboye
+                </h1>
+                <p
+                    className="mt-4 text-base text-[#5f6368] sm:text-lg"
+                >
+                    A life dedicated to serving through faith, scholarship, and sustainable innovation
+                </p>
+            </section>
+
             <section
                 aria-labelledby="journey-heading"
-                className="flex flex-col items-start gap-8 md:flex-row md:gap-12"
+                className="flex flex-col items-start gap-8 py-10 md:flex-row md:gap-12 md:py-0"
             >
                 <img
                     src="/michael.jpg"
                     alt="Michael Adegboye seated at a desk"
-                    className="aspect-[3/4] w-full object-cover object-center md:w-0 md:min-w-0 md:flex-1"
+                    className="aspect-[3/4] w-full rounded-none border border-[#d8d8d8] bg-[#f5f5f5] object-cover object-center shadow-none md:w-0 md:min-w-0 md:flex-1"
                 />
                 <div className="w-full md:w-0 md:flex-1 md:min-w-0">
-                    <h1 id="journey-heading" className="mb-5 text-3xl font-normal tracking-tight">
+                    <h2
+                        id="journey-heading"
+                        className="mb-5 text-3xl font-light tracking-[-0.04em] text-[#2f2f2f]"
+                    >
                         The Journey
-                    </h1>
-                    <div className="space-y-5 text-base leading-6 text-neutral-600">
+                    </h2>
+                    <div className="space-y-5 text-[1.05rem] leading-7 text-[#4f4f4f]" style={{ fontFamily: '"Segoe UI", sans-serif' }}>
                         <p>
                             Michael Adegboye&apos;s journey began with a deep calling to serve and impact lives across multiple spheres of influence. His unique path has led him to become a recognized leader in ministry, academia, and agricultural innovation.
                         </p>
