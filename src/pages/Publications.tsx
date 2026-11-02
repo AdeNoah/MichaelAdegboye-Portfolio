@@ -81,23 +81,23 @@ const Publications = () => {
         className="bg-[#eef2ff] px-6 py-8 sm:px-8"
       >
         <div className="mx-auto max-w-6xl">
-          <div className="flex items-center gap-3">
-            <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-[#c7d2fe] text-[#4338ca]">
-              <BookOpen aria-hidden="true" size={12} />
+          <div className="flex items-center gap-4">
+            <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#c7d2fe] text-[#4338ca] md:size-16">
+              <BookOpen aria-hidden="true" className="size-7 md:size-10" />
             </span>
             <div>
-              <p className="text-[8px] uppercase tracking-wide text-[#4f46e5]">
+              <p className="text-sm uppercase tracking-wide text-[#4f46e5]">
                 Publications
               </p>
               <h1
                 id="publications-heading"
-                className="text-base font-light leading-5 text-[#3730a3] sm:text-lg"
+                className="text-3xl font-light text-[#3730a3] md:text-6xl"
               >
                 Thought Leadership
               </h1>
             </div>
           </div>
-          <p className="mt-2 max-w-xl text-[9px] leading-[14px] text-[#514a83]">
+          <p className="mt-4 max-w-2xl leading-7 text-[#514a83]">
             Books, articles, and speaking engagements exploring theology, leadership, and
             practical wisdom for contemporary challenges
           </p>
@@ -110,11 +110,11 @@ const Publications = () => {
       >
         <h2
           id="published-books-heading"
-          className="text-xs font-light text-[#3730a3]"
+          className="text-3xl font-light text-[#3730a3] md:text-6xl"
         >
           Published Books
         </h2>
-        <p className="mt-1 text-[8px] text-[#706b88]">
+        <p className="mt-4 text-[#706b88]">
           Comprehensive works on faith, leadership, and purposeful living
         </p>
 
@@ -128,13 +128,13 @@ const Publications = () => {
                 <BookOpen size={15} strokeWidth={1.8} />
               </div>
               <div className="min-w-0">
-                <p className="text-[8px] leading-3 text-[#4f46e5]">{year}</p>
-                <h3 className="text-[10px] font-medium leading-3 text-[#3730a3]">{title}</h3>
-                <p className="text-[8px] leading-3 text-[#514a83]">{subtitle}</p>
-                <p className="mt-1 text-[8px] leading-3 text-[#706b88]">{description}</p>
+                <p className="text-sm leading-5 text-[#4f46e5]">{year}</p>
+                <h3 className="text-xl font-medium leading-6 text-[#3730a3]">{title}</h3>
+                <p className="leading-6 text-[#514a83]">{subtitle}</p>
+                <p className="mt-2 leading-6 text-[#706b88]">{description}</p>
                 <a
                   href="mailto:maadegboye@yahoo.com?subject=Book%20inquiry"
-                  className="mt-1 inline-flex items-center gap-1 text-[8px] font-medium text-[#4338ca] hover:text-[#312e81]"
+                  className="mt-2 inline-flex items-center gap-2 font-semibold text-[#4338ca] hover:text-[#312e81]"
                 >
                   Learn More <ArrowRight aria-hidden="true" size={9} />
                 </a>
@@ -154,27 +154,27 @@ const Publications = () => {
             className="flex aspect-[3/4] w-full max-w-sm flex-col items-center justify-center bg-gradient-to-br from-[#a5b4fc] to-[#818cf8] px-6 text-center text-white"
           >
             <BookOpen aria-hidden="true" className="mb-3" size={28} strokeWidth={1.8} />
-            <p className="text-base font-light leading-5">
+            <p className="text-3xl font-light leading-tight md:text-6xl">
               The Leader&apos;s
               <br />
               Journey
             </p>
-            <p className="mt-2 text-[8px] text-indigo-50">
+            <p className="mt-4 text-sm text-indigo-50">
               Faith &amp; Vision in Modern Leadership
             </p>
           </div>
 
           <div>
-            <p className="text-[8px] uppercase tracking-wide text-[#4f46e5]">
+            <p className="text-sm uppercase tracking-wide text-[#4f46e5]">
               Featured Book
             </p>
             <h2
               id="featured-book-heading"
-              className="mt-1 text-sm font-light text-[#3730a3]"
+              className="mt-2 text-3xl font-light text-[#3730a3] md:text-6xl"
             >
               The Leader&apos;s Journey
             </h2>
-            <div className="mt-2 space-y-2 text-[8px] leading-3 text-[#514a83]">
+            <div className="mt-4 space-y-4 leading-7 text-[#514a83]">
               <p>
                 In this groundbreaking work, Michael Adegboye bridges the gap between
                 timeless spiritual principles and modern leadership challenges. Drawing
@@ -191,15 +191,15 @@ const Publications = () => {
             <div className="mt-3 flex flex-wrap items-start gap-1">
               <a
                 href="mailto:maadegboye@yahoo.com?subject=Purchase%20The%20Leader%27s%20Journey"
-                className="inline-flex items-center gap-1 bg-[#4338ca] px-2 py-1 text-[8px] font-semibold text-white hover:bg-[#3730a3]"
+                className="inline-flex items-center gap-2 bg-[#4338ca] px-6 py-4 font-semibold text-white hover:bg-[#3730a3]"
               >
                 Purchase Book <ArrowRight aria-hidden="true" size={9} />
               </a>
               <details className="group">
-                <summary className="cursor-pointer list-none border border-[#4338ca] px-2 py-1 text-[8px] font-semibold text-[#3730a3] hover:bg-white/60 [&::-webkit-details-marker]:hidden">
+                <summary className="cursor-pointer list-none border border-[#4338ca] px-6 py-4 font-semibold text-[#3730a3] hover:bg-white/60 [&::-webkit-details-marker]:hidden">
                   Read Sample Chapter
                 </summary>
-                <p className="mt-2 text-[8px] leading-3 text-[#514a83]">
+                <p className="mt-4 leading-7 text-[#514a83]">
                   Leadership begins with the willingness to serve. Before a vision can
                   inspire others, it must first take root in humility, conviction, and a
                   clear sense of purpose.
@@ -216,11 +216,11 @@ const Publications = () => {
       >
         <h2
           id="recent-articles-heading"
-          className="text-xs font-light text-[#3730a3]"
+          className="text-3xl font-light text-[#3730a3] md:text-6xl"
         >
           Recent Articles
         </h2>
-        <p className="mt-1 text-[8px] text-[#706b88]">
+        <p className="mt-4 text-[#706b88]">
           Published writing on faith, leadership, and societal transformation
         </p>
 
@@ -232,23 +232,23 @@ const Publications = () => {
             >
               <div className="flex items-start justify-between gap-3">
                 <div>
-                  <span className="inline-flex rounded-full bg-[#eef2ff] px-2 py-0.5 text-[7px] text-[#4338ca]">
+                  <span className="inline-flex rounded-full bg-[#eef2ff] px-3 py-1 text-sm text-[#4338ca]">
                     {category}
                   </span>
-                  <h3 className="mt-1 text-[9px] font-medium leading-3 text-[#3730a3]">
+                  <h3 className="mt-2 text-xl font-medium leading-6 text-[#3730a3]">
                     {title}
                   </h3>
-                  <p className="mt-0.5 text-[8px] leading-3 text-[#706b88]">
+                  <p className="mt-2 leading-6 text-[#706b88]">
                     {publication}
                   </p>
                 </div>
-                <time className="shrink-0 pt-0.5 text-[7px] text-[#706b88]">
+                <time className="shrink-0 pt-1 text-sm text-[#706b88]">
                   {date}
                 </time>
               </div>
               <a
                 href={`mailto:maadegboye@yahoo.com?subject=${encodeURIComponent(`Article inquiry: ${title}`)}`}
-                className="mt-1 inline-flex items-center gap-1 text-[8px] font-medium text-[#4338ca] hover:text-[#312e81]"
+                className="mt-2 inline-flex items-center gap-2 font-semibold text-[#4338ca] hover:text-[#312e81]"
               >
                 Read Article <ArrowRight aria-hidden="true" size={9} />
               </a>
@@ -264,11 +264,11 @@ const Publications = () => {
         <div className="mx-auto max-w-6xl">
           <h2
             id="speaking-engagements-heading"
-            className="text-xs font-light text-[#3730a3]"
+            className="text-3xl font-light text-[#3730a3] md:text-6xl"
           >
             Speaking Engagements
           </h2>
-          <p className="mt-1 text-[8px] text-[#706b88]">
+          <p className="mt-4 text-[#706b88]">
             Upcoming conferences and events
           </p>
 
@@ -283,17 +283,17 @@ const Publications = () => {
                     <CalendarDays aria-hidden="true" size={10} />
                   </span>
                   <div>
-                    <p className="text-[7px] text-[#4f46e5]">{date}</p>
-                    <h3 className="text-[9px] font-medium leading-3 text-[#3730a3]">
+                    <p className="text-sm text-[#4f46e5]">{date}</p>
+                    <h3 className="text-xl font-medium leading-6 text-[#3730a3]">
                       {title}
                     </h3>
                   </div>
                 </div>
-                <p className="mt-2 text-[8px] leading-3 text-[#706b88]">{location}</p>
-                <p className="mt-1 text-[8px] leading-3 text-[#514a83]">{topic}</p>
+                <p className="mt-3 leading-6 text-[#706b88]">{location}</p>
+                <p className="mt-2 leading-6 text-[#514a83]">{topic}</p>
                 <a
                   href={`mailto:maadegboye@yahoo.com?subject=${encodeURIComponent(`Speaking engagement: ${title}`)}`}
-                  className="mt-2 inline-flex items-center gap-1 text-[8px] font-medium text-[#4338ca] hover:text-[#312e81]"
+                  className="mt-3 inline-flex items-center gap-2 font-semibold text-[#4338ca] hover:text-[#312e81]"
                 >
                   Event Details <ArrowRight aria-hidden="true" size={9} />
                 </a>
@@ -307,15 +307,15 @@ const Publications = () => {
         aria-labelledby="book-michael-heading"
         className="bg-[#312e81] px-6 py-7 text-center text-white"
       >
-        <h2 id="book-michael-heading" className="text-base font-light">
+        <h2 id="book-michael-heading" className="text-3xl font-light md:text-6xl">
           Book Michael to Speak
         </h2>
-        <p className="mt-2 text-[8px] leading-3 text-indigo-100">
+        <p className="mt-4 leading-7 text-indigo-100">
           Invite Michael to share his insights at your conference, church, or organization.
         </p>
         <a
           href="mailto:maadegboye@yahoo.com?subject=Speaking%20inquiry"
-          className="mt-4 inline-flex items-center gap-2 bg-white px-3 py-2 text-[8px] font-medium text-[#312e81] hover:bg-indigo-50"
+          className="mt-6 inline-flex items-center gap-2 bg-white px-6 py-4 font-medium text-[#312e81] hover:bg-indigo-50"
         >
           Speaking Inquiry <ArrowRight aria-hidden="true" size={9} />
         </a>

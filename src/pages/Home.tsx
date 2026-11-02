@@ -149,25 +149,27 @@ const Home = () => {
                 </div>
             </section>
 
-{/* roooted in purpose section */}
-            <div className='min-h-dvh bg-[#fafafa] grid max-w-screen md:grid-cols-2 justify-center items-center p-4 gap-8 md:p-8 '>
-                <div>
-                    <img src="/michael.jpg" alt="Michael Adegboye" className="h-full w-full object-cover" />
+{/* rooted in purpose section */}
+            <section className="min-h-dvh bg-[#fafafa] px-4 py-16">
+                <div className="mx-auto grid min-h-[calc(100dvh-8rem)] w-full max-w-6xl items-center gap-8 md:grid-cols-2">
+                    <div>
+                        <img src="/michael.jpg" alt="Michael Adegboye" className="h-full w-full object-cover" />
+                    </div>
+                    <div>
+                        <h2 className="mb-8 text-3xl font-light md:text-6xl">
+                            Rooted in Purpose
+                        </h2>
+                        <p className="mb-8 text-[#525252]">
+                            Michael Adegboye is a multifaceted leader whose work spans spiritual ministry, academic scholarship, and agricultural innovation. His unique approach integrates faith-based principles with practical expertise to create sustainable impact across communities.
+                            <br />
+                            As the founder of Blessed Generation Church, an accomplished author and speaker, and a trusted agriculture consultant, Michael demonstrates that diverse callings can harmonize to serve a greater mission.
+                        </p>
+                        <Link to="/about" className="flex w-fit gap-2 bg-[#0a0a0a] p-6 font-semibold text-white">
+                            Learn More <MoveRight size={24} aria-hidden="true" />
+                        </Link>
+                    </div>
                 </div>
-                <div>
-                    <h2 className='text-3xl md:text-6xl  font-light mb-8'>
-                        Rooted in Purpose
-                    </h2>
-                    <p className='text-[#525252] mb-8'>
-                        Michael Adegboye is a multifaceted leader whose work spans spiritual ministry, academic scholarship, and agricultural innovation. His unique approach integrates faith-based principles with practical expertise to create sustainable impact across communities.
-                        <br />
-                        As the founder of Blessed Generation Church, an accomplished author and speaker, and a trusted agriculture consultant, Michael demonstrates that diverse callings can harmonize to serve a greater mission.
-                    </p>
-                    <Link to="/about" className='flex gap-2 bg-[#0a0a0a] text-white p-6 font-semibold w-fit'>
-                        Learn More <MoveRight size={24} aria-hidden="true" />
-                    </Link>
-                </div>
-            </div>
+            </section>
 
 {/* featured highlight section */}
             <section className="flex min-h-[70dvh] flex-col items-center justify-center px-4 py-16">
@@ -199,7 +201,8 @@ const Home = () => {
             </section>
 
 {/* support section  */}
-            <section className="grid min-h-[70dvh] items-center gap-12 bg-gradient-to-br from-[#fffbeb] to-[#fff7ed] px-4 py-16 md:grid-cols-2 md:px-8 lg:px-16">
+            <section className="bg-gradient-to-br from-[#fffbeb] to-[#fff7ed] px-4 py-16">
+                <div className="mx-auto grid min-h-[70dvh] w-full max-w-6xl items-center gap-12 md:grid-cols-2">
                 <div>
                     <h2 className="mb-8 text-3xl font-light md:text-6xl">
                         Support Our Mission
@@ -232,6 +235,7 @@ const Home = () => {
                             </div>
                         </article>
                     ))}
+                </div>
                 </div>
             </section>
 

@@ -110,9 +110,9 @@ const About = () => {
                             Professional Experience
                         </h3>
                         <ul className="list-inside list-disc space-y-2 text-sm leading-6 text-neutral-600">
-                            <li>Lead Pastor, Blessed Generation Church (2005-Present)</li>
+                            <li>Founder and Lead Pastor, Blessed Generation Church (2005-Present)</li>
+                            <li>Published Author of books, articles, and research papers</li>
                             <li>Agriculture Consultant (2015-Present)</li>
-                            <li>Published Author of 5 books</li>
                         </ul>
                     </div>
                 </div>

@@ -8,6 +8,7 @@ import {
   Phone,
   Sprout,
 } from 'lucide-react'
+import { Link } from 'react-router'
 
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'info@michaeladegboye.com' },
@@ -28,16 +29,25 @@ const quickLinks = [
     title: 'Visit the Church',
     description: 'Learn more about Blessed Generation Church and plan your visit',
     accent: 'bg-[#ece8c7]',
+    link: '/ministry',
+    linkLabel: 'Church Information',
+    linkColor: 'text-[#78350f]',
   },
   {
     title: 'Book Speaking',
     description: 'Invite Michael to speak at your event or community gathering',
     accent: 'bg-[#dfeef8]',
+    link: '/publications',
+    linkLabel: 'Speaking information',
+    linkColor: 'text-[#1e3a8a]',
   },
   {
     title: 'Agriculture Consulting',
     description: 'Consultation for your farming project or food security initiative',
     accent: 'bg-[#dfeee4]',
+    link: '/agriculture',
+    linkLabel: 'Consulting Services',
+    linkColor: 'text-[#14532d]',
   },
 ]
 
@@ -46,7 +56,7 @@ const Contact = () => {
     <main className="min-h-screen bg-[#f3f3f3] px-4 py-8 text-[#1d1d1d] sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <header className="mb-10 text-center">
-          <h1 className="text-4xl font-light tracking-tight text-[#1d1d1d] md:text-[3.5rem]">
+          <h1 className="text-4xl font-light tracking-tight text-[#1d1d1d] md:text-7xl">
             Get in Touch
           </h1>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-[#6a6a6a] md:text-base">
@@ -157,20 +167,23 @@ const Contact = () => {
         </div>
 
         <section className="mt-16 text-center">
-          <h3 className="text-[2.2rem] font-light tracking-tight text-[#1d1d1d]">Looking for Something Specific?</h3>
+          <h3 className="text-3xl font-light tracking-tight text-[#1d1d1d] md:text-6xl">Looking for Something Specific?</h3>
           <p className="mt-2 text-sm text-[#666]">Quick links to help you find what you need</p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {quickLinks.map(({ title, description, accent }) => (
-              <article key={title} className={`rounded-md border border-[#d7d7d7] ${accent} p-5 text-left`}>
-                <div className="mb-5 flex items-center justify-between gap-3">
+            {quickLinks.map(({ title, description, accent, link, linkLabel, linkColor }) => (
+              <article key={title} className={`rounded-md border border-[#d7d7d7] ${accent} p-5 text-center`}>
+                <div className="mb-5 flex justify-center">
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/50 text-[#1f1f1f]">
                     <MessageSquareText size={18} aria-hidden="true" />
                   </span>
-                  <MoveRight size={18} aria-hidden="true" className="text-[#1d1d1d]" />
                 </div>
                 <h4 className="mb-2 text-xl font-light text-[#1d1d1d]">{title}</h4>
                 <p className="text-sm leading-relaxed text-[#4a4a4a]">{description}</p>
+                <Link to={link} className={`mt-4 inline-flex items-center gap-2 font-semibold ${linkColor}`}>
+                  {linkLabel}
+                  <MoveRight size={16} aria-hidden="true" />
+                </Link>
               </article>
             ))}
           </div>
