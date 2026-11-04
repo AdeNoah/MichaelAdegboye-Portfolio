@@ -2,76 +2,64 @@ import { ArrowRight, BookOpen, CalendarDays } from 'lucide-react'
 
 const books = [
   {
-    year: '2024',
-    title: "The Leader's Journey",
-    subtitle: 'Faith & Vision in Modern Leadership',
-    description:
-      'A comprehensive guide to integrating spiritual wisdom with contemporary leadership principles.',
-  },
-  {
     year: '2022',
-    title: 'Foundations of Faith',
-    subtitle: 'Building a Life That Lasts',
-    description:
-      'Practical insights for establishing deep spiritual roots in uncertain times.',
+    title: "Assessment of the Causes and Consequeses of School Dropouts among Government Secondary School Students in Owerri Municipal Council of Imo Statey",
   },
   {
-    year: '2020',
-    title: 'Purpose-Driven Living',
-    subtitle: 'Discovering Your Divine Assignment',
-    description:
-      'A roadmap for identifying and fulfilling your unique calling and purpose.',
+    year: '2016',
+    title: 'Effect of participation in community-based agriculture and rural development project on socio-economic status of rural dwellers in Northern Nigeria.',
   },
   {
-    year: '2019',
-    title: "The Steward's Handbook",
-    subtitle: 'Managing Life’s Resources with Wisdom',
-    description:
-      'Biblical principles for stewarding time, talent, and treasure effectively.',
+    year: '2016',
+    title: 'Socio-economic status categories of rural dwellers in northern Nigeria.',
+  },
+  {
+    year: '2015',
+    title: "Construction of a socio-economic status scale for rural dwellers in northern Nigeria.",
   },
 ]
 
-const articles = [
-  {
-    category: 'Leadership',
-    title: 'Leadership in Times of Crisis',
-    publication: 'Christian Today Magazine',
-    date: 'March 2026',
-  },
-  {
-    category: 'Agriculture',
-    title: 'The Intersection of Faith and Agriculture',
-    publication: 'Agriculture & Rural Journal',
-    date: 'January 2026',
-  },
-  {
-    category: 'Ministry',
-    title: 'Raising the Next Generation of Leaders',
-    publication: 'Ministry Quarterly',
-    date: 'November 2025',
-  },
-]
+// const articles = [
+//   {
+//     category: 'Research',
+//     title: '',
+//     publication: 'Christian Today Magazine',
+//     date: 'March 2026',
+//   },
+//   {
+//     category: 'Agriculture',
+//     title: 'The Intersection of Faith and Agriculture',
+//     publication: 'Agriculture & Rural Journal',
+//     date: 'January 2026',
+//   },
+//   {
+//     category: 'Ministry',
+//     title: 'Raising the Next Generation of Leaders',
+//     publication: 'Ministry Quarterly',
+//     date: 'November 2025',
+//   },
+// ]
 
-const engagements = [
-  {
-    date: 'May 2026',
-    title: 'Global Leadership Summit',
-    location: 'Nairobi, Kenya',
-    topic: 'Topic: Authentic Leadership in the Modern Era',
-  },
-  {
-    date: 'March 2026',
-    title: 'African Agriculture Conference',
-    location: 'Accra, Ghana',
-    topic: 'Topic: Sustainable Farming & Faith Communities',
-  },
-  {
-    date: 'February 2026',
-    title: 'Ministry Excellence Forum',
-    location: 'Lagos, Nigeria',
-    topic: 'Topic: Building Multi-Generational Churches',
-  },
-]
+// const engagements = [
+//   {
+//     date: 'May 2026',
+//     title: 'Global Leadership Summit',
+//     location: 'Nairobi, Kenya',
+//     topic: 'Topic: Authentic Leadership in the Modern Era',
+//   },
+//   {
+//     date: 'March 2026',
+//     title: 'African Agriculture Conference',
+//     location: 'Accra, Ghana',
+//     topic: 'Topic: Sustainable Farming & Faith Communities',
+//   },
+//   {
+//     date: 'February 2026',
+//     title: 'Ministry Excellence Forum',
+//     location: 'Lagos, Nigeria',
+//     topic: 'Topic: Building Multi-Generational Churches',
+//   },
+// ]
 
 const Publications = () => {
   return (
@@ -93,7 +81,7 @@ const Publications = () => {
                 id="publications-heading"
                 className="text-3xl font-light text-[#3730a3] md:text-6xl"
               >
-                Thought Leadership
+                Writing Research Proposal for Academic and Grant Pursuits
               </h1>
             </div>
           </div>
@@ -115,7 +103,7 @@ const Publications = () => {
           Published Books
         </h2>
         <p className="mt-4 text-[#706b88]">
-          Comprehensive works on faith, leadership, and purposeful living
+          Comprehensive published works on faith, leadership, and societal transformation
         </p>
 
         <div className="mt-4 grid grid-cols-1 gap-x-4 gap-y-3 min-[440px]:grid-cols-2 sm:gap-x-8">
@@ -155,12 +143,7 @@ const Publications = () => {
           >
             <BookOpen aria-hidden="true" className="mb-3" size={28} strokeWidth={1.8} />
             <p className="text-3xl font-light leading-tight md:text-6xl">
-              The Leader&apos;s
-              <br />
-              Journey
-            </p>
-            <p className="mt-4 text-sm text-indigo-50">
-              Faith &amp; Vision in Modern Leadership
+              Writing Research Proposal for Academic and Grant Pursuits
             </p>
           </div>
 
@@ -172,25 +155,15 @@ const Publications = () => {
               id="featured-book-heading"
               className="mt-2 text-3xl font-light text-[#3730a3] md:text-6xl"
             >
-              The Leader&apos;s Journey
+              Writing Research Proposal for Academic and Grant Pursuits
             </h2>
             <div className="mt-4 space-y-4 leading-7 text-[#514a83]">
               <p>
-                In this groundbreaking work, Michael Adegboye bridges the gap between
-                timeless spiritual principles and modern leadership challenges. Drawing
-                from biblical wisdom, contemporary research, and personal experience, this
-                book offers a comprehensive framework for leading with integrity, vision,
-                and purpose.
-              </p>
-              <p>
-                Whether you&apos;re leading a church, a business, or a community
-                organization, you&apos;ll discover practical insights for navigating
-                complexity, building trust, and creating lasting impact.
               </p>
             </div>
             <div className="mt-3 flex flex-wrap items-start gap-1">
               <a
-                href="mailto:maadegboye@yahoo.com?subject=Purchase%20The%20Leader%27s%20Journey"
+                href="#"
                 className="inline-flex items-center gap-2 bg-[#4338ca] px-6 py-4 font-semibold text-white hover:bg-[#3730a3]"
               >
                 Purchase Book <ArrowRight aria-hidden="true" size={9} />
@@ -200,9 +173,10 @@ const Publications = () => {
                   Read Sample Chapter
                 </summary>
                 <p className="mt-4 leading-7 text-[#514a83]">
-                  Leadership begins with the willingness to serve. Before a vision can
-                  inspire others, it must first take root in humility, conviction, and a
-                  clear sense of purpose.
+                  The purpose of any research proposal is to ensure that the candidate has done sufficient preliminary reading/investigation in the area of interest and has thought about the issues involved and able to provide more than a broad description of the topic for which the research is planned. Students are expected to prepare a research proposal and defend it in order for the supervisors to assess the worth,
+                  viability,
+                  possibility/feasibility of the study. As a foundation gives a clue to the shape and quality of a building, a proposal helps to make a face judgment of the quality expected from the research by the time it is finally carried out.
+                  Ogolo (1996) identified the following as the importance of a research proposal:
                 </p>
               </details>
             </div>
@@ -210,7 +184,9 @@ const Publications = () => {
         </div>
       </section>
 
-      <section
+      {/* unconfirmable recent articles */}
+
+      {/* <section
         aria-labelledby="recent-articles-heading"
         className="mx-auto max-w-6xl px-6 py-6 sm:px-8"
       >
@@ -255,9 +231,11 @@ const Publications = () => {
             </article>
           ))}
         </div>
-      </section>
+      </section> */}
 
-      <section
+      {/* unconfirmable engagements  */}
+
+      {/* <section
         aria-labelledby="speaking-engagements-heading"
         className="bg-[#fafafa] px-6 py-6 sm:px-8"
       >
@@ -301,7 +279,7 @@ const Publications = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section
         aria-labelledby="book-michael-heading"

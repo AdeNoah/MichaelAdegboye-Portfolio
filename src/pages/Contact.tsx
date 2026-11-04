@@ -6,20 +6,21 @@ import {
   MessageSquareText,
   MoveRight,
   Phone,
+  Send,
   Sprout,
 } from 'lucide-react'
 import { Link } from 'react-router'
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'info@michaeladegboye.com' },
-  { icon: Phone, label: 'Phone', value: '+234 123 456 7890' },
-  { icon: MapPin, label: 'Office', value: '123 Faith Avenue\nLagos, Nigeria' },
+  { icon: Mail, label: 'Email', value: 'maadegboye@yahoo.com' },
+  { icon: Phone, label: 'Phone', value: '+234 803 393 8691' },
+  { icon: MapPin, label: 'Office', value: 'Blessed Generation Church Auditorium, \n Trade Center Kuru, Plateau, Nigeria' },
 ]
 
 const inquiryDetails = [
-  { icon: Church, label: 'Ministry / Church', value: 'hello@blessedgeneration.org' },
-  { icon: BookOpen, label: 'Speaking / Publication', value: 'speaker@bookings.com' },
-  { icon: Sprout, label: 'Agriculture Consulting', value: 'agri@consulting.com' },
+  { icon: Church, label: 'Ministry / Church', value: 'blessedgeneration2002@gmail.com' },
+  { icon: BookOpen, label: 'Speaking / Publication', value: 'maadegboye@yahoo.com' },
+  { icon: Sprout, label: 'Agriculture Consulting', value: 'tinojog2024@gmail.com' },
 ]
 
 const inquiryOptions = ['General Inquiry', 'Ministry', 'Publishing', 'Agriculture Consulting', 'Speaking Engagement']
@@ -92,7 +93,12 @@ const Contact = () => {
                     </span>
                     <div>
                       <p>{label}</p>
-                      <p className="text-xs text-[#7b7b7b]">{value}</p>
+                      <a
+                        href={`mailto:${value}`}
+                        className="text-xs text-[#7b7b7b] hover:underline focus-visible:underline"
+                      >
+                        {value}
+                      </a>
                     </div>
                   </li>
                 ))}
@@ -159,7 +165,7 @@ const Contact = () => {
                   className="inline-flex items-center gap-2 rounded-md bg-[#111111] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#1a1a1a]"
                 >
                   Send Message
-                  <MoveRight size={16} aria-hidden="true" />
+                  <Send size={16} aria-hidden="true" />
                 </button>
               </div>
             </form>

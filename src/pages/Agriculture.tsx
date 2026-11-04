@@ -131,7 +131,10 @@ const Agriculture = () => {
         </div>
       </section>
 
-      <section aria-labelledby="impact-heading" className="bg-[#effcf4] px-6 py-6 sm:px-8 sm:py-10">
+
+      {/* comented out section because of iconsistent numbers */}
+
+      {/* <section aria-labelledby="impact-heading" className="bg-[#effcf4] px-6 py-6 sm:px-8 sm:py-10">
         <div className="mx-auto max-w-6xl text-center">
           <h2 id="impact-heading" className="text-3xl font-light text-[#17643d] md:text-6xl">Impact by the Numbers</h2>
           <p className="mt-4 text-slate-600">Measurable results across our consultancy work</p>
@@ -149,7 +152,7 @@ const Agriculture = () => {
             ))}
           </dl>
         </div>
-      </section>
+      </section> */}
 
       <section id="services" aria-labelledby="services-heading" className="bg-white px-6 py-5 sm:px-8 sm:py-10">
         <div className="mx-auto max-w-6xl">
@@ -176,7 +179,8 @@ const Agriculture = () => {
         </div>
       </section>
 
-      <section aria-labelledby="projects-heading" className="bg-[#fafafa] px-6 py-6 sm:px-8 sm:py-10">
+      {/* section commented out because of unconfirmable projects */}
+      {/* <section aria-labelledby="projects-heading" className="bg-[#fafafa] px-6 py-6 sm:px-8 sm:py-10">
         <div className="mx-auto max-w-6xl">
           <h2 id="projects-heading" className="text-3xl font-light text-[#17643d] md:text-6xl">Featured Projects</h2>
           <p className="mt-4 text-slate-600">Real-world examples of sustainable agriculture in action</p>
@@ -193,9 +197,12 @@ const Agriculture = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section aria-label="Client testimonial" className="bg-white px-6 py-5 text-center sm:px-8 sm:py-12">
+
+      {/* commented out section because of unconfirmable testimonials */}
+
+      {/* <section aria-label="Client testimonial" className="bg-white px-6 py-5 text-center sm:px-8 sm:py-12">
         <div className="mx-auto max-w-3xl">
           <span className="mx-auto flex size-10 items-center justify-center rounded-full bg-[#dcfce7] text-[#16834b]">
             <UsersRound aria-hidden="true" size={19} />
@@ -206,7 +213,7 @@ const Agriculture = () => {
           <p className="mt-5 text-xl font-semibold text-slate-700">Adebayo Oladunji</p>
           <p className="mt-2 text-slate-500">Chairman, Sustainable Cassava Cooperative</p>
         </div>
-      </section>
+      </section> */}
 
       <section className="bg-[#075b32] px-6 py-5 text-center text-white sm:px-8 sm:py-10">
         <h2 className="text-3xl font-light md:text-6xl">Ready to Transform Your Farm?</h2>
