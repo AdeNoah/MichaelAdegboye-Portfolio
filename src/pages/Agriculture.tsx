@@ -42,26 +42,26 @@ const services = [
   },
 ]
 
-const projects = [
-  {
-    year: '2023',
-    title: 'Sustainable Cassava Cooperative',
-    location: 'Oyo State, Nigeria',
-    description: 'Established a 50-farmer cooperative implementing sustainable cassava farming with 40% yield increase.',
-  },
-  {
-    year: '2024',
-    title: 'Youth Agricultural Training Program',
-    location: 'Lagos, Nigeria',
-    description: 'Trained 80 youth in modern farming techniques, with 65% starting their own agricultural ventures.',
-  },
-  {
-    year: '2023–2025',
-    title: 'Church Community Gardens Initiative',
-    location: 'Multiple Locations',
-    description: 'Helped 12 churches establish community gardens serving 500+ families with fresh produce.',
-  },
-]
+// const projects = [
+//   {
+//     year: '2023',
+//     title: 'Sustainable Cassava Cooperative',
+//     location: 'Oyo State, Nigeria',
+//     description: 'Established a 50-farmer cooperative implementing sustainable cassava farming with 40% yield increase.',
+//   },
+//   {
+//     year: '2024',
+//     title: 'Youth Agricultural Training Program',
+//     location: 'Lagos, Nigeria',
+//     description: 'Trained 80 youth in modern farming techniques, with 65% starting their own agricultural ventures.',
+//   },
+//   {
+//     year: '2023–2025',
+//     title: 'Church Community Gardens Initiative',
+//     location: 'Multiple Locations',
+//     description: 'Helped 12 churches establish community gardens serving 500+ families with fresh produce.',
+//   },
+// ]
 
 const Agriculture = () => {
   return (

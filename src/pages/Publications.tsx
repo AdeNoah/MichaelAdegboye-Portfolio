@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, CalendarDays } from 'lucide-react'
+import { ArrowRight, BookOpen, } from 'lucide-react'
 
 const books = [
   {
@@ -107,7 +107,7 @@ const Publications = () => {
         </p>
 
         <div className="mt-4 grid grid-cols-1 gap-x-4 gap-y-3 min-[440px]:grid-cols-2 sm:gap-x-8">
-          {books.map(({ year, title, subtitle, description }) => (
+          {books.map(({ year, title,  }) => (
             <article key={title} className="flex items-start gap-2">
               <div
                 aria-hidden="true"
@@ -118,8 +118,7 @@ const Publications = () => {
               <div className="min-w-0">
                 <p className="text-sm leading-5 text-[#4f46e5]">{year}</p>
                 <h3 className="text-xl font-medium leading-6 text-[#3730a3]">{title}</h3>
-                <p className="leading-6 text-[#514a83]">{subtitle}</p>
-                <p className="mt-2 leading-6 text-[#706b88]">{description}</p>
+                
                 <a
                   href="mailto:maadegboye@yahoo.com?subject=Book%20inquiry"
                   className="mt-2 inline-flex items-center gap-2 font-semibold text-[#4338ca] hover:text-[#312e81]"
