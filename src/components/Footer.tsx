@@ -38,8 +38,18 @@ const Footer = () => {
                             <Link className="hover:text-white" to="/contact">Contact</Link>
                         </li>
                         <li>
-                            <a className="hover:text-white" href="mailto:hello@example.com">
+                            <a className="hover:text-white" href="mailto:maadegboye@yahoo.com">
                                 maadegboye@yahoo.com
+                            </a>
+                        </li>
+                        <li>
+                            <a className="hover:text-white break-words" href="mailto:blessedgeneration2002@gmail.com">
+                                blessedgeneration2002@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a className="hover:text-white" href="mailto:tinojog2024@gmail.com">
+                                tinojog2024@gmail.com
                             </a>
                         </li>
                     </ul>

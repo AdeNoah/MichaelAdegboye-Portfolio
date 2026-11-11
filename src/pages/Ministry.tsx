@@ -39,6 +39,8 @@ const Ministry = () => {
             </a>
             <a
               href="https://youtube.com/@blessedgenerationchurch_hub?si=EjfLEstrPYf4YtUz"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center border border-[#c2410c] px-6 py-4 font-semibold text-[#c2410c] hover:bg-[#fff7ed]"
             >
               Watch Online
@@ -130,7 +132,11 @@ const Ministry = () => {
             <ul className="space-y-2 text-slate-700">
               <li className="flex items-center gap-2">
                 <Clock3 aria-hidden="true" className="shrink-0 text-slate-600" size={16} />
-                <span>First Service: 8:00 AM</span>
+                <span>Sunday School: 9:00 AM</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Clock3 aria-hidden="true" className="shrink-0 text-slate-600" size={16} />
+                <span>Celebration Service: 10:45 AM</span>
               </li>
             </ul>
           </article>
@@ -244,13 +250,15 @@ const Ministry = () => {
           <div className="mt-12 flex flex-col justify-center gap-4 sm:flex-row">
             <a
               className="inline-flex min-h-14 items-center justify-center gap-2 bg-[#c2410c] px-8 font-semibold text-white hover:bg-[#9a3412]"
-              href="mailto:maadegboye@yahoo.com?subject=One-Time%20Giving"
+              href="#"
+              // target="_blank"
+              // rel="noopener noreferrer"
             >
               Give Now <ArrowRight aria-hidden="true" size={16} />
             </a>
             <a
               className="inline-flex min-h-14 items-center justify-center gap-2 border border-[#c2410c] px-8 font-semibold text-[#c2410c] hover:bg-[#fff7ed]"
-              href="mailto:maadegboye@yahoo.com?subject=Ministry%20Partnership"
+              href="mailto:blessedgeneration2002@gmail.com?subject=Ministry%20Partnership"
             >
               Partner With Us <ArrowRight aria-hidden="true" size={16} />
             </a>

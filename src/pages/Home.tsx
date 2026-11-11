@@ -53,8 +53,8 @@ const highlights = [
     {
         image: '/publications.jpg',
         name: 'Publications',
-        title: `The Leader's Journey: Faith & Vision`,
-        note: 'A comprehensive guide to integrating spiritual wisdom with modern leadership'
+        title: `Writing Research proposal for Academic and Grant Pursuits`,
+        note: 'A comprehensive guide to effectively writing the grant winning proposals for research in academic settings'
     },
     {
         image: '/highlight-agriculture.jpg',
@@ -87,7 +87,7 @@ const Home = () => {
     return (
         <main className='flex flex-col justify-center '>
 
-{/* home section  */}
+            {/* home section  */}
             <div className='flex text-center  flex-col items-center justify-center bg-[#f5f5f5] min-h-dvh p-2'>
                 <h1 className='text-4xl font-light md:text-7xl mb-4'>
                     Rev. Michael <br /><span className='font-semibold'>Adegboye</span> PhD.
@@ -103,7 +103,7 @@ const Home = () => {
                 </a>
             </div>
 
-{/* three domains section  */}
+            {/* three domains section  */}
             <section id="three-domains" className="flex min-h-dvh scroll-mt-4 flex-col items-center justify-center px-4 py-16">
                 <h2 className="mb-4 text-center text-3xl font-light md:text-6xl">
                     Three Domains, One Vision
@@ -149,7 +149,7 @@ const Home = () => {
                 </div>
             </section>
 
-{/* rooted in purpose section */}
+            {/* rooted in purpose section */}
             <section className="min-h-dvh bg-[#fafafa] px-4 py-16">
                 <div className="mx-auto grid min-h-[calc(100dvh-8rem)] w-full max-w-6xl items-center gap-8 md:grid-cols-2">
                     <div>
@@ -171,7 +171,7 @@ const Home = () => {
                 </div>
             </section>
 
-{/* featured highlight section */}
+            {/* featured highlight section */}
             <section className="flex min-h-[70dvh] flex-col items-center justify-center px-4 py-16">
                 <h2 className="mb-4 text-center text-3xl font-light md:text-6xl">
                     Featured Highlights
@@ -200,46 +200,46 @@ const Home = () => {
                 </div>
             </section>
 
-{/* support section  */}
+            {/* support section  */}
             <section className="bg-gradient-to-br from-[#fffbeb] to-[#fff7ed] px-4 py-16">
                 <div className="mx-auto grid min-h-[70dvh] w-full max-w-6xl items-center gap-12 md:grid-cols-2">
-                <div>
-                    <h2 className="mb-8 text-3xl font-light md:text-6xl">
-                        Support Our Mission
-                    </h2>
-                    <p className="mb-6 max-w-xl text-[#525252]">
-                        Partner with us in advancing faith, knowledge, and sustainable impact across communities. Your support enables ministry outreach, educational resources, and agricultural programs that transform lives.
-                    </p>
-                    <p className="mb-8 max-w-xl text-[#525252]">
-                        Whether through one-time gifts or ongoing partnership, every contribution makes a meaningful difference in reaching people with hope and practical solutions.
-                    </p>
-                    <div className="flex flex-col gap-4 sm:flex-row">
-                        <button  className="flex items-center justify-center gap-2 bg-[#d97706] px-8 py-4 font-semibold text-white">
-                            Give Now <MoveRight size={24} aria-hidden="true" />
-                        </button>
-                        <Link to="/ministry" className="flex items-center justify-center gap-2 border border-[#d97706] px-8 py-4 font-semibold text-[#d97706]">
-                            Learn More <MoveRight size={24} aria-hidden="true" />
-                        </Link>
+                    <div>
+                        <h2 className="mb-8 text-3xl font-light md:text-6xl">
+                            Support Our Mission
+                        </h2>
+                        <p className="mb-6 max-w-xl text-[#525252]">
+                            Partner with us in advancing faith, knowledge, and sustainable impact across communities. Your support enables ministry outreach, educational resources, and agricultural programs that transform lives.
+                        </p>
+                        <p className="mb-8 max-w-xl text-[#525252]">
+                            Whether through one-time gifts or ongoing partnership, every contribution makes a meaningful difference in reaching people with hope and practical solutions.
+                        </p>
+                        <div className="flex flex-col gap-4 sm:flex-row">
+                            <button className="flex items-center justify-center gap-2 bg-[#d97706] px-8 py-4 font-semibold text-white">
+                                Give Now <MoveRight size={24} aria-hidden="true" />
+                            </button>
+                            <Link to="/ministry" className="flex items-center justify-center gap-2 border border-[#d97706] px-8 py-4 font-semibold text-[#d97706]">
+                                Learn More <MoveRight size={24} aria-hidden="true" />
+                            </Link>
+                        </div>
                     </div>
-                </div>
 
-                <div className="grid gap-5">
-                    {contacts.map(({ title, description, icon: Icon }) => (
-                        <article key={title} className="grid grid-cols-[auto_1fr] items-start gap-5 border border-[#facc15] bg-white/40 p-6">
-                            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#fef3c7] text-[#d97706]">
-                                <Icon size={28} aria-hidden="true" />
-                            </div>
-                            <div>
-                                <h3 className="mb-2 text-xl font-semibold">{title}</h3>
-                                <p className="text-sm leading-6 text-[#525252]">{description}</p>
-                            </div>
-                        </article>
-                    ))}
-                </div>
+                    <div className="grid gap-5">
+                        {contacts.map(({ title, description, icon: Icon }) => (
+                            <article key={title} className="grid grid-cols-[auto_1fr] items-start gap-5 border border-[#facc15] bg-white/40 p-6">
+                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#fef3c7] text-[#d97706]">
+                                    <Icon size={28} aria-hidden="true" />
+                                </div>
+                                <div>
+                                    <h3 className="mb-2 text-xl font-semibold">{title}</h3>
+                                    <p className="text-sm leading-6 text-[#525252]">{description}</p>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
                 </div>
             </section>
 
-{/* lets connect section */}
+            {/* lets connect section */}
             <div className='min-h-[50dvh] flex flex-col items-center justify-center p-2 bg-[#171717] text-white text-center'>
                 <h2 className='text-3xl md:text-6xl font-light mb-4'>
                     Let's connect

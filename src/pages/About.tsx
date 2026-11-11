@@ -24,7 +24,7 @@ const coreValues = [
 const About = () => {
     return (
         <main className="mx-auto max-w-6xl px-6 text-neutral-800 sm:px-8">
-            <section className="relative left-1/2 mb-10 flex min-h-[28dvh] w-screen -translate-x-1/2 flex-col items-center justify-center bg-[#fafafa] px-6 text-center">
+            <section className="mb-10 flex min-h-[28dvh] w-full flex-col items-center justify-center bg-[#fafafa] px-6 text-center">
                 <h1
                     className="text-4xl font-light tracking-[-0.06em] text-[#2f2f2f] sm:text-5xl lg:text-[4rem]"
                 >

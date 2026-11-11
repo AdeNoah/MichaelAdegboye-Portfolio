@@ -1,21 +1,31 @@
+
 import { ArrowRight, BookOpen, } from 'lucide-react'
 
 const books = [
   {
     year: '2022',
     title: "Assessment of the Causes and Consequeses of School Dropouts among Government Secondary School Students in Owerri Municipal Council of Imo Statey",
+    link: 'https://doi.org/10.9734/ajess/2022/v32i330771',
+  },
+  {
+    year: '2021',
+    title: "Comparison of the Academic Performance of Students from Intact Homes and Broken Homes in Colleges of Agriculture and Related Disciplines in Plateau State, Nigeria",
+    link: 'https://doi.org/10.11648/j.aas.20210602.13',
   },
   {
     year: '2016',
     title: 'Effect of participation in community-based agriculture and rural development project on socio-economic status of rural dwellers in Northern Nigeria.',
+    link: 'https://doi.org/10.9734/AJAEES/2016/22058',
   },
   {
     year: '2016',
     title: 'Socio-economic status categories of rural dwellers in northern Nigeria.',
+    link: 'https://doi.org/10.9734/AIR/2016/21836',
   },
   {
     year: '2015',
     title: "Construction of a socio-economic status scale for rural dwellers in northern Nigeria.",
+    link: 'https://doi.org/10.9734/AJAEES/2015/8548',
   },
 ]
 
@@ -86,8 +96,7 @@ const Publications = () => {
             </div>
           </div>
           <p className="mt-4 max-w-2xl leading-7 text-[#514a83]">
-            Books, articles, and speaking engagements exploring theology, leadership, and
-            practical wisdom for contemporary challenges
+            Books, articles, and speaking engagements, exploring community development through leadership, and practical wisdom for contemporary challenges.
           </p>
         </div>
       </section>
@@ -100,14 +109,14 @@ const Publications = () => {
           id="published-books-heading"
           className="text-3xl font-light text-[#3730a3] md:text-6xl"
         >
-          Published Books
+          Published Articles
         </h2>
         <p className="mt-4 text-[#706b88]">
-          Comprehensive published works on faith, leadership, and societal transformation
+          Comprehensive published articles on societal transformation through Agriculture and Rural Development, and other related topics.
         </p>
 
         <div className="mt-4 grid grid-cols-1 gap-x-4 gap-y-3 min-[440px]:grid-cols-2 sm:gap-x-8">
-          {books.map(({ year, title,  }) => (
+          {books.map(({ year, title, link }) => (
             <article key={title} className="flex items-start gap-2">
               <div
                 aria-hidden="true"
@@ -120,7 +129,8 @@ const Publications = () => {
                 <h3 className="text-xl font-medium leading-6 text-[#3730a3]">{title}</h3>
                 
                 <a
-                  href="mailto:maadegboye@yahoo.com?subject=Book%20inquiry"
+                  href={link}
+                  target="_blank" rel='noopener noreferrer'
                   className="mt-2 inline-flex items-center gap-2 font-semibold text-[#4338ca] hover:text-[#312e81]"
                 >
                   Learn More <ArrowRight aria-hidden="true" size={9} />
@@ -138,12 +148,13 @@ const Publications = () => {
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-6 min-[440px]:grid-cols-2 sm:gap-12">
           <div
             aria-label="The Leader's Journey book cover"
-            className="flex aspect-[3/4] w-full max-w-sm flex-col items-center justify-center bg-gradient-to-br from-[#a5b4fc] to-[#818cf8] px-6 text-center text-white"
+            className="flex aspect-[3/4] w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#a5b4fc] to-[#818cf8] px-6 text-center text-white"
           >
-            <BookOpen aria-hidden="true" className="mb-3" size={28} strokeWidth={1.8} />
-            <p className="text-3xl font-light leading-tight md:text-6xl">
-              Writing Research Proposal for Academic and Grant Pursuits
-            </p>
+            <img
+              src="./writing-research-proposal.jpg"
+              alt="Writing Research Proposal for Academic and Grant Pursuits"
+              className="h-full w-full object-cover"
+            />
           </div>
 
           <div>
@@ -291,7 +302,7 @@ const Publications = () => {
           Invite Michael to share his insights at your conference, church, or organization.
         </p>
         <a
-          href="mailto:maadegboye@yahoo.com?subject=Speaking%20inquiry"
+          href="/contact"
           className="mt-6 inline-flex items-center gap-2 bg-white px-6 py-4 font-medium text-[#312e81] hover:bg-indigo-50"
         >
           Speaking Inquiry <ArrowRight aria-hidden="true" size={9} />

@@ -9,7 +9,58 @@ import {
   Send,
   Sprout,
 } from 'lucide-react'
+import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router'
+
+const sheetURL = "https://script.google.com/macros/s/AKfycbws7O1bsLGoHQQ6KmWsyZlWPJ457zVZ5foO70fW25prTmACvjVyAVOO-Gr4WuAvxLBZ/exec"
+
+const handleFormSubmit = async (formData: FormData) => {
+  const payload = {
+    fullName: formData.get('fullName'),
+    emailAddress: formData.get('emailAddress'),
+    inquiryType: formData.get('inquiryType'),
+    subject: formData.get('subject'),
+    message: formData.get('message'),
+  }
+
+  const response = await fetch(sheetURL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'text/plain;charset=utf-8',
+    },
+    body: JSON.stringify(payload),
+  })
+
+  if (response.type === 'opaque') {
+    return
+  }
+
+  if (!response.ok) {
+    throw new Error(`The submission endpoint returned ${response.status}.`)
+  }
+
+  const responseText = await response.text()
+  if (responseText) {
+    let result: unknown = undefined
+    try {
+      result = JSON.parse(responseText)
+    } catch (error) {
+      if (responseText.trimStart().startsWith('{')) {
+        throw new Error('The submission endpoint returned an invalid response.', { cause: error })
+      }
+    }
+
+    if (
+      typeof result === 'object' &&
+      result !== null &&
+      'success' in result &&
+      result.success === false
+    ) {
+      throw new Error('The submission endpoint could not save your message.')
+    }
+  }
+}
 
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'maadegboye@yahoo.com' },
@@ -53,6 +104,33 @@ const quickLinks = [
 ]
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submissionMessage, setSubmissionMessage] = useState('')
+  const [submissionError, setSubmissionError] = useState(false)
+
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    const form = event.currentTarget
+    setIsSubmitting(true)
+    setSubmissionMessage('')
+    setSubmissionError(false)
+
+    try {
+      await handleFormSubmit(new FormData(form))
+      form.reset()
+      setSubmissionMessage('Your message has been sent.')
+    } catch (error) {
+      setSubmissionError(true)
+      setSubmissionMessage(
+        error instanceof Error
+          ? `Unable to send your message: ${error.message}`
+          : 'Unable to send your message. Please try again.',
+      )
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <main className="min-h-screen bg-[#f3f3f3] px-4 py-8 text-[#1d1d1d] sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
@@ -106,14 +184,18 @@ const Contact = () => {
             </div>
           </aside>
 
+
+          {/* form section */}
           <section className="rounded-[10px] border border-[#d9d9d9] bg-[#f8f8f8] p-4 shadow-[0_0_0_1px_rgba(0,0,0,0.01)] sm:p-6">
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={onSubmit}>
               <div className="grid gap-4 md:grid-cols-2">
                 <label className="block text-sm font-medium text-[#333]">
                   <span className="mb-1.5 block">Full Name*</span>
                   <input
                     type="text"
+                    name="fullName"
                     placeholder="Your name"
+                    required
                     className="w-full rounded-md border border-[#cfcfcf] bg-transparent px-3 py-2.5 text-sm text-[#111827] placeholder:text-[#8a8a8a] focus:border-[#111827] focus:outline-none"
                   />
                 </label>
@@ -122,7 +204,9 @@ const Contact = () => {
                   <span className="mb-1.5 block">Email Address*</span>
                   <input
                     type="email"
+                    name="emailAddress"
                     placeholder="your@email.com"
+                    required
                     className="w-full rounded-md border border-[#cfcfcf] bg-transparent px-3 py-2.5 text-sm text-[#111827] placeholder:text-[#8a8a8a] focus:border-[#111827] focus:outline-none"
                   />
                 </label>
@@ -131,7 +215,11 @@ const Contact = () => {
               <div className="grid gap-4 md:grid-cols-2">
                 <label className="block text-sm font-medium text-[#333]">
                   <span className="mb-1.5 block">Inquiry Type*</span>
-                  <select className="w-full appearance-none rounded-md border border-[#cfcfcf] bg-transparent px-3 py-2.5 pr-8 text-sm text-[#111827] focus:border-[#111827] focus:outline-none">
+                  <select
+                    name="inquiryType"
+                    required
+                    className="w-full appearance-none rounded-md border border-[#cfcfcf] bg-transparent px-3 py-2.5 pr-8 text-sm text-[#111827] focus:border-[#111827] focus:outline-none"
+                  >
                     {inquiryOptions.map((option) => (
                       <option key={option} value={option}>
                         {option}
@@ -144,7 +232,9 @@ const Contact = () => {
                   <span className="mb-1.5 block">Subject*</span>
                   <input
                     type="text"
+                    name="subject"
                     placeholder="Brief subject line"
+                    required
                     className="w-full rounded-md border border-[#cfcfcf] bg-transparent px-3 py-2.5 text-sm text-[#111827] placeholder:text-[#8a8a8a] focus:border-[#111827] focus:outline-none"
                   />
                 </label>
@@ -154,7 +244,9 @@ const Contact = () => {
                 <span className="mb-1.5 block">Message*</span>
                 <textarea
                   rows={6}
+                  name="message"
                   placeholder="Tell us how can help you..."
+                  required
                   className="w-full resize-none rounded-md border border-[#cfcfcf] bg-transparent px-3 py-2.5 text-sm text-[#111827] placeholder:text-[#8a8a8a] focus:border-[#111827] focus:outline-none"
                 />
               </label>
@@ -162,11 +254,21 @@ const Contact = () => {
               <div className="pt-1">
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="inline-flex items-center gap-2 rounded-md bg-[#111111] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#1a1a1a]"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                   <Send size={16} aria-hidden="true" />
                 </button>
+                {submissionMessage && (
+                  <p
+                    role="status"
+                    aria-live="polite"
+                    className={submissionError ? 'text-sm text-red-700' : 'text-sm text-green-700'}
+                  >
+                    {submissionMessage}
+                  </p>
+                )}
               </div>
             </form>
           </section>
